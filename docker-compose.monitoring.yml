@@ -5,7 +5,7 @@ services:
     image: gcr.io/cadvisor/cadvisor:latest
     container_name: cadvisor
     ports:
-      - "80:8080"
+      - "8080:8080"        # Host 8080 mapped to container 8080
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:rw
@@ -19,12 +19,12 @@ services:
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
-      - "80:9090"
+      - "9090:9090"        # Host 9090 mapped to container 9090
     restart: always
 
   grafana:
     image: grafana/grafana
     container_name: grafana
     ports:
-      - "80:3000"
+      - "3000:3000"        # Host 3000 mapped to container 3000
     restart: always
