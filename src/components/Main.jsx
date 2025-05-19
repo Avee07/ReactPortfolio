@@ -17,7 +17,7 @@ const Main = () => {
             <TypeAnimation
       sequence={[
         
-        'I am a full stack web developer with a passion for building web applications ',
+        'I am a full stack web developer with devops with a passion for building web applications ',
         1000, 
         'I am passionate about learning  technologies',
         1000,
