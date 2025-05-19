@@ -26,7 +26,9 @@ const Main = () => {
         'I am a Coder',
         2000,
         'This is a new deployment',
-        2000
+        2000,
+        'This is a new deployment by docker',
+        2000,
       ]}
       wrapper="div"
       speed={50}
