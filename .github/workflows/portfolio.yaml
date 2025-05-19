@@ -54,7 +54,10 @@ jobs:
             else
                 echo "Docker is already installed"
             fi
+            cd /var/www/ReactPortfolio
+            git pull origin main
             docker pull ${{ secrets.DOCKER_USERNAME }}/react-portfolio:latest
             docker stop react-portfolio || true
             docker rm react-portfolio || true
             docker run -d --name react-portfolio -p 3000:80 ${{ secrets.DOCKER_USERNAME }}/react-portfolio:latest
+            docker-compose -f docker-compose.monitoring.yml up -d
