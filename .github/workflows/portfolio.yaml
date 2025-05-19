@@ -22,7 +22,7 @@ jobs:
     - name: Deploy to DigitalOcean
       run: |
         ssh -o StrictHostKeyChecking=no root@143.244.131.230 << 'EOF'
-          cd /var/www/YOUR_REPO
+          cd /var/www/ReactPortfolio
           git pull origin main
           npm install
           npm run build
